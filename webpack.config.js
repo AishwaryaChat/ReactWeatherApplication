@@ -16,6 +16,8 @@ module.exports = {
       Main: path.resolve('app/components/Main.jsx'),
       Nav: path.resolve('app/components/Nav.jsx'),
       Weather: path.resolve('app/components/Weather.jsx'),
+      WeatherForm: path.resolve('app/components/WeatherForm.jsx'),
+      WeatherMessage: path.resolve('app/components/WeatherMessage.jsx'),
       About: path.resolve('app/components/About.jsx'),
       Examples: path.resolve('app/components/Examples.jsx')
     },
