@@ -14,7 +14,9 @@ module.exports = {
     // and agin when requiring the particular file
     alias: {
       Main: path.resolve('app/components/Main.jsx'),
-      Nav: path.resolve('app/components/Nav.jsx')
+      Nav: path.resolve('app/components/Nav.jsx'),
+      Weather: path.resolve('app/components/Weather.jsx'),
+      About: path.resolve('app/components/About.jsx')
     },
     extensions: ['*', '.js', '.jsx'] // list of file extensions that we want to process
   },
