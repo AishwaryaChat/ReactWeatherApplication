@@ -16,7 +16,8 @@ module.exports = {
       Main: path.resolve('app/components/Main.jsx'),
       Nav: path.resolve('app/components/Nav.jsx'),
       Weather: path.resolve('app/components/Weather.jsx'),
-      About: path.resolve('app/components/About.jsx')
+      About: path.resolve('app/components/About.jsx'),
+      Examples: path.resolve('app/components/Examples.jsx')
     },
     extensions: ['*', '.js', '.jsx'] // list of file extensions that we want to process
   },
