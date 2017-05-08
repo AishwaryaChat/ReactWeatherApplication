@@ -12874,14 +12874,14 @@ var _require = __webpack_require__(71),
     IndexRoute = _require.IndexRoute,
     hashHistory = _require.hashHistory;
 
+{/* history prop tells react that we want to route '#' sign followed by the path, in order to maintain routes for our app */}
+{/* Route is used to create paths for different components */}
 ReactDOM.render(React.createElement(
   Router,
   { history: hashHistory },
-  ' ',
   React.createElement(
     Route,
     { path: '/', component: _Main2.default },
-    ' ',
     React.createElement(Route, { path: 'about', component: _About2.default }),
     React.createElement(Route, { path: 'examples', component: _Examples2.default }),
     React.createElement(IndexRoute, { component: _Weather2.default })
@@ -12910,7 +12910,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var React = __webpack_require__(7);
 
 var _require = __webpack_require__(71),
-    Link = _require.Link; // provide the links to route to different paths
+    Link = _require.Link,
+    IndexLink = _require.IndexLink; // provide the links to route to different paths
 
 var Nav = function (_React$Component) {
   _inherits(Nav, _React$Component);
@@ -12933,19 +12934,18 @@ var Nav = function (_React$Component) {
           'Nav Component'
         ),
         React.createElement(
-          Link,
-          { to: '/' },
+          IndexLink,
+          { to: '/', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
           'Get Weather'
         ),
-        ' ',
         React.createElement(
           Link,
-          { to: '/about' },
+          { to: '/about', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
           'About'
         ),
         React.createElement(
           Link,
-          { to: '/examples' },
+          { to: '/examples', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
           'Examples'
         )
       );
