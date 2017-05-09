@@ -1,11 +1,17 @@
 const React = require('react')
 
-export default class WeatherMessage extends React.Component {
-  render () {
-    const temp = this.props.temp
-    const location = this.props.location
+const WeatherMessage = (props) => {
+    const {temp, location} = props
     return (
       <h3>It is {temp} in {location}.</h3>
     )
-  }
 }
+
+// can also be done like below
+// const WeatherMessage = ({temp, location}) => {
+//     return (
+//       <h3>It is {temp} in {location}.</h3>
+//     )
+// }
+
+export default  WeatherMessage

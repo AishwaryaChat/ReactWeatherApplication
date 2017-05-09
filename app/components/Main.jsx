@@ -1,15 +1,15 @@
 const React = require('react')
 import Nav from 'Nav'
-// import Weather from 'Weather'
 
-export default class Main extends React.Component {
-  render () {
+const Main = (props) => {
     return (
       <div>
         <Nav />
         <h1>Main Component</h1>
-        {this.props.children}
+        {/*{this.props.children} */} {/* this can be removed as the props is already passed as argument */}
+        {props.children}
       </div>
     )
-  }
 }
+
+export default Main

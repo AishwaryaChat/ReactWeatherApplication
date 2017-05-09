@@ -11,7 +11,6 @@ export default class Weather extends React.Component {
     }
   }
   handleSearch (location) {
-    debugger
     this.setState({isLoading: true})
     openWeatherMap.getTemp(location)
     .then((temp) => {

@@ -1,10 +1,8 @@
 const React = require('react')
 const {Link, IndexLink} = require('react-router') // provide the links to route to different paths
 
-export default class Nav extends React.Component {
-  render () {
+const Nav = () => {
     return (
-
       <div>
         <h1>Nav Component</h1>
         {/* "to" points to specific path */}
@@ -16,5 +14,6 @@ export default class Nav extends React.Component {
         <Link to='/examples' activeClassName='active' activeStyle={{fontWeight: 'bold'}}>Examples</Link>
       </div>
     )
-  }
 }
+
+export default Nav

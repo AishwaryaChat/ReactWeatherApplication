@@ -1,9 +1,9 @@
 const React = require('react')
 
-export default class Examples extends React.Component {
-  render () {
-    return (
-      <h4> Examples Component </h4>
-    )
-  }
+const Examples = (props) => {
+  return (
+    <h4> Examples Component </h4>
+  )
 }
+
+export default Examples

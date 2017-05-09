@@ -36,5 +36,6 @@ module.exports = {
         exclude: /(node_modules|bower_components)/ // folders which we do not want to parse
       }
     ]
-  }
+  },
+  devtool: 'cheap-module-eval-source-map'
 }
