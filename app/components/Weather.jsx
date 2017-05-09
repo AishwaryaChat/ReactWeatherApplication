@@ -7,27 +7,40 @@ export default class Weather extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      location:'MIAMI',
-      temp:30
+      isLoading: false
     }
   }
   handleSearch (location) {
-    const that = this
+    debugger
+    this.setState({isLoading: true})
     openWeatherMap.getTemp(location)
     .then((temp) => {
-      that.setState({
+      this.setState({
         location: location,
-        temp: temp
+        temp: temp,
+        isLoading: false
       })
     })
-    .catch((err) => alert(err))
+    .catch((err) => {
+      this.setState({isLoading: false})
+      alert(err)})
   }
   render () {
+    const {isLoading, temp, location} = this.state
+
+    function renderMessage() {
+      if (isLoading) {
+        return <h3>Fetching Weather</h3>
+      } else if (temp && location) {
+        return <WeatherMessage temp={temp} location={location}/>
+      }
+    }
+
     return (
       <div>
         <h4> Weather Component </h4>
         <WeatherForm onSearch={this.handleSearch.bind(this)} />
-        <WeatherMessage location={this.state.location} temp={this.state.temp}/>
+        {renderMessage()}
       </div>
     )
   }
