@@ -19,7 +19,7 @@ export default class WeatherForm extends React.Component {
       <div>
         <form onSubmit={this.onFormSubmit.bind(this)}>
           <input type='text' ref='location' placeholder='Enter City Name' /> <br />
-          <button>Get Weather</button>
+          <button className="btn waves-effect waves-light" type="submit" name="action">Get Weather</button>
         </form>
       </div>
     )
