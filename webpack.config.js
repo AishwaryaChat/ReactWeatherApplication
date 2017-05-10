@@ -1,9 +1,18 @@
 /* we use the webpack file so that we can use babel and react */
-
+const webpack = require('webpack')
 const path = require('path')
 
 module.exports = {
-  entry: './app/app.jsx', // entry point for rendering
+  entry: ['./app/app.jsx'],        // entry point for rendering
+  externals: {
+    jquery: 'jQuery'
+  },
+  plugins: [
+    new webpack.ProvidePlugin({
+      '$': 'jquery',
+      'jQuery': 'jquery'
+    })
+  ],
   output: {               // to provide the output to be saved i.e the bundle.js file
     path: __dirname,
     filename: './public/bundle.js'
