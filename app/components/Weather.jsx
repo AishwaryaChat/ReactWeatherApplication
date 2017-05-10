@@ -21,6 +21,7 @@ export default class Weather extends React.Component {
       })
     })
     .catch((err) => {
+      debugger
       this.setState({isLoading: false})
       alert(err)})
   }
