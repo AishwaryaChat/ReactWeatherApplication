@@ -11,7 +11,9 @@ export default class Weather extends React.Component {
     }
   }
   handleSearch (location) {
-    this.setState({isLoading: true})
+    this.setState({
+      isLoading: true
+    })
     openWeatherMap.getTemp(location)
     .then((temp) => {
       this.setState({
@@ -21,11 +23,14 @@ export default class Weather extends React.Component {
       })
     })
     .catch((err) => {
-      this.setState({isLoading: false})
-      alert(err)})
+      this.setState({
+        isLoading: false,})
+        alert('City Not found')
+      })
   }
+
   render () {
-    const {isLoading, temp, location} = this.state
+    const {isLoading, temp, location, errorMessage} = this.state
 
     function renderMessage() {
       if (isLoading) {
@@ -37,7 +42,7 @@ export default class Weather extends React.Component {
 
     return (
       <div>
-        <h1 className='center-align'>Get Weather</h1>
+        <h1 className='center-align page-title'>Get Weather</h1>
         <WeatherForm onSearch={this.handleSearch.bind(this)} />
         {renderMessage()}
       </div>

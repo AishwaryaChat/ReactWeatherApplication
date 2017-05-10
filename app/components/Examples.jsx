@@ -4,7 +4,7 @@ const {Link, IndexLink} = require('react-router')
 const Examples = (props) => {
   return (
     <div>
-      <h1 className='center-align'>Examples</h1>
+      <h1 className='center-align page-title'>Examples</h1>
       <p>Here are few example locations to try out:</p>
       <ol>
         <li>

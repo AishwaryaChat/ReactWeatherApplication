@@ -23,7 +23,7 @@ export default class Nav extends React.Component {
               <li><Link to='/examples' activeClassName='active' activeStyle={{fontWeight: 'bold'}}>Examples</Link></li>
               <li>
                 <form onSubmit={this.onSearch.bind(this)}>
-                    <input id="search" type="search" placeholder='Search Weather' />
+                    <input id="search" type="search" placeholder='Search Weather by city' />
                 </form>
               </li>
             </ul>

@@ -29,7 +29,8 @@ module.exports = {
       WeatherMessage: path.resolve('app/components/WeatherMessage.jsx'),
       About: path.resolve('app/components/About.jsx'),
       Examples: path.resolve('app/components/Examples.jsx'),
-      openWeatherMap: path.resolve('app/components/openWeatherMap.jsx')
+      openWeatherMap: path.resolve('app/components/openWeatherMap.jsx'),
+      applicationStyles: path.resolve('app/styles/app.css')
     },
     extensions: ['*', '.js', '.jsx'] // list of file extensions that we want to process
   },
