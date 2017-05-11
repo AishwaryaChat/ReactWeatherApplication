@@ -40,12 +40,3 @@ export default class Nav extends React.Component {
     )
   }
 }
-
-
-
-{/* <li>
-  <form>
-    <input type='text' placeholder='Enter City Name' />
-    <button>Get Weather</button>
-  </form>
-</li> */}
