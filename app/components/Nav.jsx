@@ -1,11 +1,19 @@
 const React = require('react')
 const {Link, IndexLink} = require('react-router') // provide the links to route to different paths
+import Weather from 'Weather'
+const weather = new Weather()
 
 export default class Nav extends React.Component {
 
   onSearch (e) {
     e.preventDefault()
-    alert('Not yet wired up')
+    const location = this.refs.location.value
+
+    if (location.length > 0) {
+      this.refs.location.value = ''
+      const encodedLocation = encodeURIComponent(location)
+      window.location.hash = '#/?location=' + encodedLocation
+    }
   }
 
   render () {
@@ -23,7 +31,7 @@ export default class Nav extends React.Component {
               <li><Link to='/examples' activeClassName='active' activeStyle={{fontWeight: 'bold'}}>Examples</Link></li>
               <li>
                 <form onSubmit={this.onSearch.bind(this)}>
-                    <input id="search" type="search" placeholder='Search Weather by city' />
+                    <input id="search" ref="location" type="search" placeholder='Search Weather by city' />
                 </form>
               </li>
             </ul>
