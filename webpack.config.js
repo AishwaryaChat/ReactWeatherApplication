@@ -30,7 +30,7 @@ module.exports = {
       About: path.resolve('app/components/About.jsx'),
       Examples: path.resolve('app/components/Examples.jsx'),
       openWeatherMap: path.resolve('app/components/openWeatherMap.jsx'),
-      applicationStyles: path.resolve('app/styles/app.css')
+      applicationStyles: path.resolve('app/styles/app.scss')
     },
     extensions: ['*', '.js', '.jsx'] // list of file extensions that we want to process
   },
@@ -44,7 +44,8 @@ module.exports = {
         },
         test: /\.jsx?$/, // regular expression to run this loader only on .jsx files.
         exclude: /(node_modules|bower_components)/ // folders which we do not want to parse
-      }
+      },
+      { test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader' }
     ]
   },
   devtool: 'cheap-module-eval-source-map'

@@ -4,9 +4,11 @@ import Main from 'Main'
 import Weather from 'Weather'
 import About from 'About'
 import Examples from 'Examples'
+import applicationStyles from 'applicationStyles'
 
 // object de-structuring
 const {Route, Router, IndexRoute, hashHistory} = require('react-router')
+
 
 //require('style-loader!css-loader!foundation-sites/dist/js/foundation.min.js')
 
